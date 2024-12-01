@@ -18,5 +18,7 @@ Environment Management: Python dotenv for configuration management.
 2. python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 3. pip install -r requirements.txt
-4. python app.py
+4. Configure environment variables
+Create a .env file in the root directory with the following contents:
+5. python app.py
 
