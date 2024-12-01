@@ -122,7 +122,6 @@ admin.add_view(UserView(db['users']))
 admin.add_view(CommentView(db['comments']))
 
 
-
 ## login, register
 api.add_resource(RegisterResource, '/register')
 api.add_resource(LoginResource, '/login')
