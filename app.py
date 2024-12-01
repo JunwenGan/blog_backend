@@ -17,6 +17,7 @@ from resources.article import ArticleResource, ArticleListResource
 from flask_pymongo import PyMongo
 from werkzeug.exceptions import NotFound
 from resources.comment import GetCommentsResource, AddCommentResource
+from dotenv import load_dotenv
 
 class UserForm(Form):
     username = StringField(
@@ -110,6 +111,7 @@ class CommentView(ModelView):
             model['article_id'] = ObjectId(form.article_id.data)
             model['user_id'] = ObjectId(form.user_id.data)
 
+load_dotenv()
 app = Flask(__name__)
 app.config.from_object('config.Config')
 api = Api(app)
